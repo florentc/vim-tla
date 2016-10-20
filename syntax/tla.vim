@@ -239,7 +239,7 @@ syn match tlaCommentMarker "\\\*"                       conceal
 syn match tlaComment "\\\*.*" contains=tlaCommentMarker,tlaTodo
 syn region tlaComment start="(\*" end="\*)" contains=tlaComment,tlaTodo
 " Beginning of module
-syn region tlaComment start="\%^" end="\ze-\{4,\}\s*MODULE\s*\w*\s*-\{4,\}" keepend contains=tlaTodo
+syn region tlaComment start="\%^" end="-\{4,\}\s*MODULE\s*\w*\s*-\{4,\}" keepend contains=tlaTitle,tlaTodo
 " Beyond end of module
 syn region tlaComment start="=\{4,\}" end="\%$" contains=tlaBoxes,tlaTodo
 
