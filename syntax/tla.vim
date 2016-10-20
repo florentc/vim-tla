@@ -2,7 +2,7 @@
 " Language: TLA+
 " Maintainer: Florent Ch.
 " Last Change: THU 20 OCT 2016
-" Version: 0.1
+" Version: 0.1.3
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
@@ -90,6 +90,8 @@ syn region tlaString start=+"+ skip=+\\"+ end=+"+
 " Delimiters I
 syn match tlaDelimiter "[{}()\[\]]"
 syn match tlaDelimiter "{}"                             conceal cchar=∅
+syn match tlaDelimiter ","
+syn match tlaDelimiter "]_"
 
 " ASCII Operators with unicode conceal character
 syn match tlaOperator "<"
@@ -100,8 +102,12 @@ syn match tlaOperator "-"
 syn match tlaOperator "*"
 syn match tlaOperator "%"
 syn match tlaOperator ":"
-syn match tlaOperator ","
 syn match tlaOperator "'"
+syn match tlaOperator "!"
+syn match tlaOperator "|"
+syn match tlaOperator "&"
+syn match tlaOperator "\$"
+syn match tlaOperator "\^"
 syn match tlaOperator "\~"                              conceal cchar=¬
 syn match tlaOperator "\\"
 syn match tlaOperator "/"
@@ -121,9 +127,19 @@ syn match tlaOperator "||"                              conceal cchar=‖
 syn match tlaOperator "\.\."
 syn match tlaOperator "\.\.\."                          conceal cchar=…
 syn match tlaOperator "=="                              conceal cchar=≜
+syn match tlaOperator ":="                              conceal cchar=≔
 syn match tlaOperator "!!"
 syn match tlaOperator "??"
 syn match tlaOperator "@@"
+syn match tlaOperator "++"
+syn match tlaOperator "--"
+syn match tlaOperator "\*\*"
+syn match tlaOperator "//"
+syn match tlaOperator "\^\^"
+syn match tlaOperator "&&"
+syn match tlaOperator "%%"
+syn match tlaOperator "##"
+syn match tlaOperator "::="                             conceal cchar=⩴
 " Postfix
 syn match tlaOperator "\^\(+\)"                         conceal cchar=⁺
 syn match tlaOperator "\^\(*\)"
