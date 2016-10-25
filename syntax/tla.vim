@@ -2,7 +2,7 @@
 " Language: TLA+
 " Maintainer: Florent Ch.
 " Last Change: THU 20 OCT 2016
-" Version: 0.1.4
+" Version: 0.2
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
@@ -95,6 +95,10 @@ syn match tlaDelimiter "{}"                             conceal cchar=∅
 syn match tlaDelimiter ","
 syn match tlaDelimiter "]_"
 
+" EXCEPT macros
+syn match tlaExceptMacro "@"
+syn match tlaExceptMacro "!"
+
 " ASCII Operators with unicode conceal character
 syn match tlaOperator "<"
 syn match tlaOperator ">"
@@ -105,7 +109,7 @@ syn match tlaOperator "*"
 syn match tlaOperator "%"
 syn match tlaOperator ":"
 syn match tlaOperator "'"
-syn match tlaOperator "!"
+syn match tlaOperator "\w\+\zs!\ze"
 syn match tlaOperator "|"
 syn match tlaOperator "&"
 syn match tlaOperator "\$"
@@ -267,6 +271,7 @@ highlight link tlaBoxes          Special
 highlight link tlaComment        Comment
 highlight link tlaCommentMarker  Comment
 highlight link tlaConditional    Conditional
+highlight link tlaExceptMacro    Macro
 highlight link tlaDelimiter      Delimiter
 highlight link tlaDefSet         Normal
 highlight link tlaIdentifier     Identifier
