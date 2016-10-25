@@ -2,7 +2,7 @@
 " Language: TLA+
 " Maintainer: Florent Ch.
 " Last Change: THU 20 OCT 2016
-" Version: 0.2
+" Version: 0.2.1
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
@@ -208,18 +208,18 @@ syn match tlaDelimiter "<<"                             conceal cchar=〈
 syn match tlaDelimiter ">>"                             conceal cchar=〉
 
 " Definitions (regular identifiers, macros, functions)
-syn match tlaIdentifier "\zs\w*\((.*)\|\[.*\]\)\s*\ze==" contains=tlaDefSet,tlaOperator,tlaKeyword
+syn match tlaIdentifier "\zs\w\+\((.*)\|\[.*\]\)\s*\ze==" contains=tlaDefSet,tlaOperator,tlaKeyword
 syn match tlaDefSet "\\in\s*.*\ze]" contained contains=tlaOperator,tlaKeyword,tlaDelimiter
-syn match tlaIdentifier "\zs\w*\s*\ze==" contains=tlaOperator,tlaKeyword
+syn match tlaIdentifier "\zs\w\+\s*\ze==" contains=tlaOperator,tlaKeyword
 " Postfix  operator definition
-syn match tlaIdentifier "\zs\w*\s*\(\^+\|\^*\|\^#\)\s*\ze==" contains=tlaOperator,tlaKeyword
+syn match tlaIdentifier "\zs\w\+\s*\(\^+\|\^*\|\^#\)\s*\ze==" contains=tlaOperator,tlaKeyword
 " Prefix operator definition
-syn match tlaIdentifier "\zs-\s*\w*\s*\ze==" contains=tlaOperator,tlaKeyword
+syn match tlaIdentifier "\zs-\s*\w\+\s*\ze==" contains=tlaOperator,tlaKeyword
 " Infix operator definition
 " For now, non-word characters or lowercase words prefixed by a backslash are
 " allowed as the infix operator
 " TODO deny invalid infix operators
-syn match tlaIdentifier "\zs\w*\s*\(\W*\|\\[a-z]*\)\s*\w*\s*\ze==" contains=tlaOperator,tlaKeyword
+syn match tlaIdentifier "\zs\w\+\s*\(\W\+\|\\[a-z]\+\)\s*\w\+\s*\ze==" contains=tlaOperator,tlaKeyword
 
 " Standard modules operators
 syn keyword tlaStdOperator Infinity                     conceal cchar=∞
