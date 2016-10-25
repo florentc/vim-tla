@@ -2,11 +2,13 @@
 " Language: TLA+
 " Maintainer: Florent Ch.
 " Last Change: THU 20 OCT 2016
-" Version: 0.1.3
+" Version: 0.1.4
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
 " when the file begins with a keyword
+" FIXME Fairness operators must be preceded by a whitespace to be highlighted
+" (workaround to prevent false matches in identifiers that contain WF_ or SF_)
 
 if exists("b:current_syntax")
   finish
@@ -50,7 +52,7 @@ syn keyword tlaKeyword PROPOSITION
 syn keyword tlaKeyword PROVE
 syn keyword tlaKeyword QED
 syn keyword tlaKeyword RECURSIVE
-syn keyword tlaKeyword SF_
+syn match tlaKeyword "\sSF_"
 syn keyword tlaKeyword STATE
 syn keyword tlaKeyword SUBSET
 syn keyword tlaKeyword SUFFICES
@@ -62,7 +64,7 @@ syn keyword tlaKeyword UNION
 syn keyword tlaKeyword USE
 syn keyword tlaKeyword VARIABLE
 syn keyword tlaKeyword VARIABLES
-syn keyword tlaKeyword WF_
+syn match tlaKeyword "\sWF_"
 syn keyword tlaKeyword WITH
 syn keyword tlaKeyword WITNESS
 
