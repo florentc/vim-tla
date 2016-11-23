@@ -1,6 +1,6 @@
 # vim-tla
 
-vim-tla is a [Vim](http://www.vim.org) and [neovim](https://neovim.io/) filetype for the [TLA+](http://research.microsoft.com/en-us/um/people/lamport/tla/tla.html) specification language and the ![TLA+ Proof System](http://tla.msr-inria.inria.fr/tlaps/content/Home.html).
+vim-tla is a [Vim](http://www.vim.org) and [neovim](https://neovim.io/) filetype for the [TLA+](http://research.microsoft.com/en-us/um/people/lamport/tla/tla.html) specification language and the [TLA+ Proof System](http://tla.msr-inria.inria.fr/tlaps/content/Home.html).
 
 ![With text concealing](https://framapic.org/l0kRuBT1yTEO/RYXd8f2u1Rsr.png) ![Without text concealing](https://framapic.org/r0yPjMEVwsee/bdDuauRIPd31.png)
 
