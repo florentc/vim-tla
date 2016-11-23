@@ -1,6 +1,6 @@
 # vim-tla
 
-vim-tla is a [Vim](http://www.vim.org) and [neovim](https://neovim.io/) filetype for the [TLA+](http://research.microsoft.com/en-us/um/people/lamport/tla/tla.html) specification language.
+vim-tla is a [Vim](http://www.vim.org) and [neovim](https://neovim.io/) filetype for the [TLA+](http://research.microsoft.com/en-us/um/people/lamport/tla/tla.html) specification language and the ![TLA+ Proof System](http://tla.msr-inria.inria.fr/tlaps/content/Home.html).
 
 ![With text concealing](https://framapic.org/l0kRuBT1yTEO/RYXd8f2u1Rsr.png) ![Without text concealing](https://framapic.org/r0yPjMEVwsee/bdDuauRIPd31.png)
 
@@ -8,6 +8,7 @@ vim-tla is a [Vim](http://www.vim.org) and [neovim](https://neovim.io/) filetype
 
 * Filetype detection based on filename extension
 * Highlighting for all TLA+ keywords and operators
+* Highlighting of the TLA+ proof steps (TLA+ Proof System)
 * Highlighting for identifiers and symbols declarations
 * Highlighting for sets and operators from the standard modules
 * Extensive use of the Vim **conceal** feature: all operators can be depicted by the corresponding *unicode symbol*.

@@ -17,7 +17,7 @@
 " Language: TLA+
 " Maintainer: Florent Ch.
 " Last Change: 23 OCT 2016
-" Version: 0.2.1
+" Version: 0.2.2
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
@@ -265,6 +265,9 @@ syn keyword tlaStdOperator JavaTime
 syn keyword tlaStdOperator Permutations
 syn keyword tlaStdOperator SortSeq
 
+" TLAPS step names
+syn match tlaStepName "<\d\+>\w*\.\="
+
 " TLA Asciiart
 syn match tlaBoxes "-\{4,\}"
 syn match tlaBoxes "=\{4,\}"
@@ -294,6 +297,7 @@ highlight link tlaKeyword        Keyword
 highlight link tlaNumber         Number
 highlight link tlaOperator       Operator
 highlight link tlaStdOperator    Operator
+highlight link tlaStepName       Macro
 highlight link tlaString         String
 highlight link tlaTitle          Title
 highlight link tlaTodo           Todo
