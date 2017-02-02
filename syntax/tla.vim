@@ -16,8 +16,8 @@
 "
 " Language: TLA+
 " Maintainer: Florent Ch.
-" Last Change: 23 NOV 2016
-" Version: 0.2.3
+" Last Change: 03 FEB 2017
+" Version: 0.2.4
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
@@ -172,7 +172,7 @@ syn match tlaOperator "\\approx"                        conceal cchar=≈
 syn match tlaOperator "\\asymp"                         conceal cchar=≍
 syn match tlaOperator "\\bigcirc"                       conceal cchar=◯
 syn match tlaOperator "\\bullet"                        conceal cchar=●
-syn match tlaOperator "\(\\cap\|\\intersect\)"          conceal cchar=∩
+syn match tlaOperator "\\cap"                           conceal cchar=∩
 syn match tlaOperator "\\cdot"                          conceal cchar=·
 syn match tlaOperator "\\circ\|\\o"                     conceal cchar=∘
 syn match tlaOperator "\\cong"                          conceal cchar=≅
@@ -184,6 +184,7 @@ syn match tlaOperator "\(\\equiv\|<=>\)"                conceal cchar=⇔
 syn match tlaOperator "\(\\geq\|>=\)"                   conceal cchar=≥
 syn match tlaOperator "\\gg"                            conceal cchar=≫
 syn match tlaOperator "\\in"                            conceal cchar=∈
+syn match tlaOperator "\\intersect"                     conceal cchar=∩
 syn match tlaOperator "\(\\land\|/\\\)"                 conceal cchar=∧
 syn match tlaOperator "\\ll"                            conceal cchar=≪
 syn match tlaOperator "\(\\lnot\|\\neg\)"               conceal cchar=¬
