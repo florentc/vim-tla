@@ -16,8 +16,8 @@
 "
 " Language: TLA+
 " Maintainer: Florent Ch.
-" Last Change: 03 FEB 2017
-" Version: 0.2.4
+" Last Change: 03 MAR 2017
+" Version: 0.2.5
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
@@ -86,7 +86,9 @@ syn keyword tlaConditional IF
 syn keyword tlaConditional THEN
 syn keyword tlaConditional ELSE
 
-" Types (standard modules)
+" Types
+syn keyword tlaType BOOLEAN
+" standard modules
 syn keyword tlaType Int                                 conceal cchar=ℤ
 syn keyword tlaType Nat                                 conceal cchar=ℕ
 syn keyword tlaType Real                                conceal cchar=ℝ
