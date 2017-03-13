@@ -16,8 +16,8 @@
 "
 " Language: TLA+
 " Maintainer: Florent Ch.
-" Last Change: 03 MAR 2017
-" Version: 0.2.5
+" Last Change: 13 MAR 2017
+" Version: 0.2.6
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
@@ -261,6 +261,7 @@ syn keyword tlaStdOperator RTBound
 syn keyword tlaStdOperator RTNow
 syn keyword tlaStdOperator now
 syn keyword tlaStdOperator Print
+syn keyword tlaStdOperator PrintT
 syn keyword tlaStdOperator Assert
 syn keyword tlaStdOperator JavaTime
 syn keyword tlaStdOperator Permutations
