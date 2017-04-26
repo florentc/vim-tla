@@ -16,8 +16,8 @@
 "
 " Language: TLA+
 " Maintainer: Florent Ch.
-" Last Change: 13 MAR 2017
-" Version: 0.2.6
+" Last Change: 26 APR 2017
+" Version: 0.2.7
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
@@ -279,7 +279,7 @@ syn match tlaTitle "-\{4,\}\s*MODULE\s*\w*\s*-\{4,\}" contains=tlaBoxes,tlaKeywo
 syn keyword tlaTodo contained TODO XXX FIXME
 syn match tlaCommentMarker "\\\*"                       conceal
 syn match tlaComment "\\\*.*" contains=tlaCommentMarker,tlaTodo
-syn region tlaComment start="(\*" end="\*)" contains=tlaComment,tlaTodo
+syn region tlaComment start="(\*" end="\*)" contains=tlaTodo
 " Beginning of module
 syn region tlaComment start="\%^" end="-\{4,\}\s*MODULE\s*\w*\s*-\{4,\}" keepend contains=tlaTitle,tlaTodo
 " Beyond end of module
