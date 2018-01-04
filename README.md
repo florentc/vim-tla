@@ -12,6 +12,7 @@ vim-tla is a [Vim](http://www.vim.org) and [neovim](https://neovim.io/) filetype
 * Highlighting for identifiers and symbols declarations
 * Highlighting for sets and operators from the standard modules
 * Extensive use of the Vim **conceal** feature: all operators can be depicted by the corresponding *unicode symbol*.
+* Vim-friendly formatting of comments (automatic formatting and reformatting of multiline comments) and compatibility with [vim-commentary](https://github.com/tpope/vim-commentary).
 * Text outside of a module is highlighted like comments
     
 ## Installation
