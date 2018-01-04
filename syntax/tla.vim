@@ -1,5 +1,5 @@
 " vim-tla - A Vim and neovim filetype for the TLA+ specification language
-" Copyright (C) 2016  Florent Ch.
+" Copyright (C) 2018  Florent Ch.
 "
 " vim-tla is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -16,8 +16,7 @@
 "
 " Language: TLA+
 " Maintainer: Florent Ch.
-" Last Change: 26 APR 2017
-" Version: 0.2.7
+" Last Change: 04 JAN 2018
  
 " Known issues:
 " FIXME Preamble (before ---- MODULE title ----) is not highlighted as comment
