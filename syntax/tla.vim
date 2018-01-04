@@ -35,7 +35,6 @@ syn keyword tlaKeyword ASSUMPTION
 syn keyword tlaKeyword AXIOM
 syn keyword tlaKeyword BY
 syn keyword tlaKeyword CASE
-syn keyword tlaKeyword CHOOSE
 syn keyword tlaKeyword CONSTANT
 syn keyword tlaKeyword CONSTANTS
 syn keyword tlaKeyword DEF
@@ -165,6 +164,7 @@ syn match tlaOperator "\^\(+\)"                         conceal cchar=⁺
 syn match tlaOperator "\^\(*\)"
 syn match tlaOperator "\^\(#\)"
 
+syn match tlaOperator "CHOOSE"
 syn match tlaOperator "\\A"                             conceal cchar=∀
 syn match tlaOperator "\\AA"
 syn match tlaOperator "\\E"                             conceal cchar=∃
@@ -222,8 +222,9 @@ syn match tlaOperator "\(\\times\|\\X\)"                conceal cchar=×
 syn match tlaDelimiter "<<"                             conceal cchar=〈
 syn match tlaDelimiter ">>"                             conceal cchar=〉
 
-" Definitions (regular identifiers, macros, functions)
+" Definitions (regular identifiers, macros, functions, quantified variables)
 syn match tlaIdentifier "\zs\w\+\((.*)\|\[.*\]\)\s*\ze==" contains=tlaDefSet,tlaOperator,tlaKeyword
+syn match tlaIdentifier "\zs\(CHOOSE\|\\EE\|\\AA\|\\E\|\\A\)\s\+\w\+\ze" contains=tlaDefSet,tlaOperator,tlaKeyword
 syn match tlaDefSet "\\in\s*.*\ze]" contained contains=tlaOperator,tlaKeyword,tlaDelimiter
 syn match tlaIdentifier "\zs\w\+\s*\ze==" contains=tlaOperator,tlaKeyword
 " Postfix  operator definition

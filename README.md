@@ -9,7 +9,12 @@ vim-tla is a [Vim](http://www.vim.org) and [neovim](https://neovim.io/) filetype
 * Filetype detection based on filename extension
 * Highlighting for all TLA+ keywords and operators
 * Highlighting of the TLA+ proof steps (TLA+ Proof System)
-* Highlighting for identifiers and symbols declarations
+* Newly introduced identifiers are highlighted to help the definition of a local
+  symbol:
+    * Macros: `identifier == definition` and `LET identifier == definition IN
+      body`
+    * Quantified variables: `\E identifier \in set: property` (also `\A`, `\AA`, `\E`,
+      `\EE`) and `CHOOSE identifier \in set: property`
 * Highlighting for sets and operators from the standard modules
 * Extensive use of the Vim **conceal** feature: all operators can be depicted by the corresponding *unicode symbol*.
 * Vim-friendly formatting of comments (automatic formatting and reformatting of multiline comments) and compatibility with [vim-commentary](https://github.com/tpope/vim-commentary).
