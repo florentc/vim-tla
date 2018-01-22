@@ -273,7 +273,7 @@ syn match tlaStepName "<\d\+>\w*\.\="
 " TLA Asciiart
 syn match tlaBoxes "-\{4,\}"
 syn match tlaBoxes "=\{4,\}"
-syn match tlaTitle "-\{4,\}\s*MODULE\s*\w*\s*-\{4,\}" contains=tlaBoxes,tlaKeyword
+syn match tlaTitle "-\{4,\}\s*MODULE\s\+\w*\s*-\{4,\}" contains=tlaBoxes,tlaKeyword
 
 " Comments
 syn keyword tlaTodo contained TODO XXX FIXME
