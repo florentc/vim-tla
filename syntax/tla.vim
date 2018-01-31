@@ -224,7 +224,7 @@ syn match tlaDelimiter ">>"                             conceal cchar=〉
 
 " Definitions (regular identifiers, macros, functions, quantified variables)
 syn match tlaIdentifier "\zs\w\+\((.*)\|\[.*\]\)\s*\ze==" contains=tlaDefSet,tlaOperator,tlaKeyword
-syn match tlaIdentifier "\zs\(CHOOSE\|\\EE\|\\AA\|\\E\|\\A\)\s\+\w\+\ze" contains=tlaDefSet,tlaOperator,tlaKeyword
+syn match tlaIdentifier "\zs\(CHOOSE\|\\EE\|\\AA\|\\E\|\\A\)\s\+\w\+\(\s*,\s*\w\+\)*\ze" contains=tlaDefSet,tlaOperator,tlaKeyword,tladelimiter
 syn match tlaDefSet "\\in\s*.*\ze]" contained contains=tlaOperator,tlaKeyword,tlaDelimiter
 syn match tlaIdentifier "\zs\w\+\s*\ze==" contains=tlaOperator,tlaKeyword
 " Postfix  operator definition
